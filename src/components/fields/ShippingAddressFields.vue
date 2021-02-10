@@ -113,7 +113,6 @@
           <v-text-field
             id="shipping-address-phone"
             :label="inputLabel('phone')"
-            :hint="inputLabel('phone_hint')"
             v-model="phone"
             :error-messages="errorMessages('phone')"
             @input="handleInput()"

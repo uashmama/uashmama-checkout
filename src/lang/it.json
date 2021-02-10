@@ -7,15 +7,16 @@
     "last_name": "cognome",
     "line_1": "indirizzo",
 		"phone": "telefono",
-		"phone_hint": "necessario in caso di contatto da parte del corriere",
     "state_code": "provincia",
     "zip_code": "cap"
   },
   "errors": {
+		"generic": "Non può essere vuoto",
     "invalid_gift_card_or_coupon": "Questo codice non è valido",
     "not_authorized": "La tua carta non è stata autorizzata",
     "out_of_stock": "Alcuni articoli non sono più disponibili",
-    "too_short": "Questo codice coupon è troppo corto"
+		"too_short": "Questo codice coupon è troppo corto",
+		"phone": "Necessario in caso di contatto da parte del corriere"
   },
   "generic": {
     "billing_address": "Indirizzo di fatturazione",

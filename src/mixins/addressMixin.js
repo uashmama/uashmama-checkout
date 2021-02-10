@@ -78,7 +78,8 @@ export const addressMixin = {
     errorMessages (fieldName) {
       const errors = []
       if (!this.$v[fieldName].$dirty) return errors
-      !this.$v[fieldName].required && errors.push("Can't be blank")
+      !this.$v[fieldName].required && errors.push(this.$t('errors.generic'))
+      !this.$v[fieldName].required && fieldName == 'phone' && error.push(this.$t('errors.phone'))
       return errors
     },
     handleInput () {
