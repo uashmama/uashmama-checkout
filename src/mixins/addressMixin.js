@@ -78,8 +78,8 @@ export const addressMixin = {
     errorMessages (fieldName) {
       const errors = []
       if (!this.$v[fieldName].$dirty) return errors
-      !this.$v[fieldName].required && errors.push(this.$t('errors.generic'))
-      !this.$v[fieldName].required && fieldName == 'phone' && errors.push(this.$t('errors.phone'))
+      const field_error = this.$t(`errors.${fieldName}`) != undefined ? this.$t(`errors.${fieldName}`) : this.$t('errors.generic')
+      !this.$v[fieldName].required && errors.push(field_error)
       return errors
     },
     handleInput () {
