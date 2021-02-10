@@ -107,7 +107,7 @@
           @blur="handleBlur('phone')"
         ></v-text-field>
       </v-flex>
-      <v-flex xs12 px-2 v-if="order.requires_billing_info">
+      <v-flex xs12 px-2>
         <v-text-field
           id="billing-address-billing-info"
           :label="inputLabel('billing_info')"
