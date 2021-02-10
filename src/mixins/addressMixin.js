@@ -79,7 +79,7 @@ export const addressMixin = {
       const errors = []
       if (!this.$v[fieldName].$dirty) return errors
       !this.$v[fieldName].required && errors.push(this.$t('errors.generic'))
-      !this.$v[fieldName].required && fieldName == 'phone' && error.push(this.$t('errors.phone'))
+      !this.$v[fieldName].required && fieldName == 'phone' && errors.push(this.$t('errors.phone'))
       return errors
     },
     handleInput () {
