@@ -6,7 +6,8 @@
     "first_name": "first name",
     "last_name": "last name",
     "line_1": "address",
-    "phone": "phone",
+		"phone": "phone",
+		"phone_hint": "necessary in case of contact by the courier",
     "state_code": "state code",
     "zip_code": "zip code"
   },
@@ -39,7 +40,7 @@
     "ship_to": "Ship to",
     "terms_of_service": "terms of service",
     "thankyou": "Thank you",
-    "thankyou_message": "Your order is confirmed"
+		"thankyou_message": "Your order is confirmed"
   },
   "order_summary": {
     "gift_card_or_coupon_code": "Have a gift card or coupon?",
