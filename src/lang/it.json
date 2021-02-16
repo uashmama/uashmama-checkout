@@ -1,6 +1,6 @@
 {
   "addresses": {
-    "billing_info": "codice fiscale",
+    "billing_info": "codice fiscale (campo non obbligatorio)",
     "city": "città",
     "country_code": "paese",
     "first_name": "nome",
