@@ -1,6 +1,6 @@
 {
   "addresses": {
-    "billing_info": "codice fiscale (campo non obbligatorio)",
+    "billing_info": "codice fiscale",
     "city": "città",
     "country_code": "paese",
     "first_name": "nome",
@@ -41,7 +41,8 @@
     "ship_to": "Spedisci a",
     "terms_of_service": "condizioni di vendita",
     "thankyou": "Grazie",
-		"thankyou_message": "Il tuo ordine è confermato"
+		"thankyou_message": "Il tuo ordine è confermato",
+		"field_not_mandatory": "campo non obbligatorio"
   },
   "order_summary": {
     "gift_card_or_coupon_code": "Hai una gift card o un coupon?",

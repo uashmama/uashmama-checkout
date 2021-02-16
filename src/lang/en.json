@@ -1,6 +1,6 @@
 {
   "addresses": {
-    "billing_info": "billing info (not mandatory)",
+    "billing_info": "billing info",
     "city": "city",
     "country_code": "country",
     "first_name": "first name",
@@ -41,7 +41,8 @@
     "ship_to": "Ship to",
     "terms_of_service": "terms of service",
     "thankyou": "Thank you",
-		"thankyou_message": "Your order is confirmed"
+		"thankyou_message": "Your order is confirmed",
+		"field_not_mandatory": "not mandatory"
   },
   "order_summary": {
     "gift_card_or_coupon_code": "Have a gift card or coupon?",

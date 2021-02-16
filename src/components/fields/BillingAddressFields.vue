@@ -110,7 +110,7 @@
       <v-flex xs12 px-2>
         <v-text-field
           id="billing-address-billing-info"
-          :label="inputLabel('billing_info')"
+          :label="inputLabel('billing_info') + requiresBillingInfo ? ` (${$t('generic.field_not_mandatory')})` : ''"
           v-model="billing_info"
           :error-messages="errorMessages('billing_info')"
           @input="handleInput()"
