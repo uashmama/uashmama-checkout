@@ -86,6 +86,10 @@
       "title": "delivery",
       "hint": "shipment summary and delivery methods"
     },
+		"coupon": {
+			"title": "coupon code or giftcard",
+			"hint": "coupon code or giftcard"
+		},
     "payment": {
       "title": "payment",
       "hint": "payment method and order confirmation"

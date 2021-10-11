@@ -67,9 +67,10 @@ export default {
       return this.validations.invalid_shipments
     },
     submitLabel () {
-      return this.requires_payment
-        ? this.$t('buttons.continue_to_payment')
-        : this.$t('buttons.place_order')
+      return this.$t('buttons.continue')
+      // return this.requires_payment
+      //   ? this.$t('buttons.continue_to_payment')
+      //   : this.$t('buttons.place_order')
     },
     ...mapState(['validations', 'buttons', 'errors', 'requires_payment']),
     ...mapMultiRowFields(['order.shipments'])

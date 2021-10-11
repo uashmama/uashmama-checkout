@@ -2,6 +2,7 @@
   <v-stepper v-model="current_step" vertical>
     <CustomerStep :step="1" />
     <DeliveryStep :step="2" v-if="requires_delivery" />
+    <CouponStep :step="couponStep" />
     <PaymentStep :step="paymentStep" v-if="requires_payment" />
   </v-stepper>
 </template>
@@ -9,6 +10,7 @@
 <script>
 import CustomerStep from '@/components/steps/CustomerStep'
 import DeliveryStep from '@/components/steps/DeliveryStep'
+import CouponStep from '@/components/steps/CouponStep'
 import PaymentStep from '@/components/steps/PaymentStep'
 import { mapFields } from 'vuex-map-fields'
 
@@ -16,11 +18,15 @@ export default {
   components: {
     CustomerStep,
     DeliveryStep,
+    CouponStep,
     PaymentStep
   },
   computed: {
-    paymentStep () {
+    couponStep () {
       return this.requires_delivery ? 3 : 2
+    },
+    paymentStep () {
+      return this.requires_delivery ? 4 : 3
     },
     ...mapFields([
       'current_step',

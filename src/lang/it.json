@@ -86,12 +86,17 @@
       "title": "consegna",
       "hint": "riepilogo spedizioni e metodi di consegna"
     },
+		"coupon": {
+			"title": "codice sconto o giftcard",
+			"hint": "codice sconto o giftcard"
+		},
     "payment": {
       "title": "pagamento",
       "hint": "metodo di pagamento e conferma ordine"
     }
   },
   "buttons": {
+		"continue": "conferma",
     "continue_to_delivery": "vai alla consegna",
     "continue_to_payment": "vai al pagamento",
     "place_order": "conferma ordine"

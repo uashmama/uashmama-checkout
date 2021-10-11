@@ -132,7 +132,7 @@ export default {
       return _.filter(this.order.line_items, { item_type: 'skus' })
     },
     giftCardLineItems () {
-      console.log(this.order.line_items)
+      // console.log(this.order.line_items)
       return _.filter(this.order.line_items, lineItem => {
         return (
           lineItem.item_type === 'gift_cards' && lineItem.total_amount_float > 0

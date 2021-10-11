@@ -95,9 +95,10 @@ export default {
       )
     },
     submitLabel () {
-      return this.requires_delivery
-        ? this.$t('buttons.continue_to_delivery')
-        : this.$t('buttons.continue_to_payment')
+      return this.$t('buttons.continue')
+      // return this.requires_payment
+      //   ? this.$t('buttons.continue_to_payment')
+      //   : this.$t('buttons.place_order')
     },
     ...mapState(['order', 'requires_delivery']),
     ...mapFields([
