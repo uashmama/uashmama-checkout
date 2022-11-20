@@ -8,11 +8,13 @@
     "line_1": "address",
 		"phone": "phone",
 		"state_code": "state code",
-    "zip_code": "zip code"
+    "zip_code": "zip code",
+    "invoice_requested": "Invoice requested (if owner of Vat number)",
+    "invoice_vat_number": "Vat Number"
   },
   "errors": {
 		"generic": "Can't be blank",
-    "invalid_gift_card_or_coupon": "This code is not valid",
+		"invalid_gift_card_or_coupon": "This code is not valid",
     "not_authorized": "Your card was declined",
     "out_of_stock": "Some items have gone out of stock",
 		"too_short": "This coupon code is too short",

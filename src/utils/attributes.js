@@ -181,6 +181,8 @@ export const orderDefaults = order => {
   return {
     _billing_address_clone_id: order._billing_address_clone_id || false,
     _shipping_address_clone_id: order._shipping_address_clone_id || false,
+    _invoice_requested: (order.metadata && order.metadata.invoice_requested && order.metadata.invoice_requested === 'yes') || false,
+    _invoice_vat_number: (order.metadata && order.metadata.invoice_vat_number) || '',
     _save_billing_address_to_customer_address_book:
       order._save_billing_address_to_customer_address_book || false,
     _save_shipping_address_to_customer_address_book:

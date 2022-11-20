@@ -117,6 +117,24 @@
           @blur="handleBlur('billing_info')"
         ></v-text-field>
       </v-flex>
+      <v-flex xs12 px-2>
+        <v-checkbox
+          :label="$t('addresses.invoice_requested')"
+          id="invoice-requested"
+          v-model="_invoice_requested"
+          color="primary"
+        ></v-checkbox>
+      </v-flex>
+      <v-flex xs12 px-2 v-if="_invoice_requested">
+        <v-text-field
+          id="invoice_vat_number"
+          :label="$t('addresses.invoice_vat_number')"
+          v-model="_invoice_vat_number"
+          :error-messages="errorMessages('invoice_vat_number')"
+          @input="handleInput()"
+          @blur="handleBlur('invoice_vat_number')"
+        ></v-text-field>
+      </v-flex>
       <v-flex xs12 px-2 v-if="showAddressBook">
         <v-checkbox
           :label="$t('generic.save_to_address_book')"
@@ -151,6 +169,8 @@ export default {
       'order.billing_address.zip_code',
       'order.billing_address.phone',
       'order.billing_address.billing_info',
+      'order._invoice_requested',
+      'order._invoice_vat_number',
       'order._save_billing_address_to_customer_address_book'
     ])
   },

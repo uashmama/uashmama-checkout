@@ -15,6 +15,8 @@ import {
 
 const normalizedOrder = (order, response) => {
   let nOrder = normalize(response.data).get(orderAttributes)
+  // Force the injection of metadata custom attribute inside parsed/cleaned Order object
+  response.data.data.attributes.metadata && (nOrder.metadata = response.data.data.attributes.metadata)
   return _.defaults(nOrder, orderDefaults(order))
 }
 
@@ -231,11 +233,18 @@ const updateAddress = attributes => {
 }
 
 const saveBillingAddress = order => {
-  return order._save_billing_address_to_customer_address_book
-    ? updateOrder(order, {
-      _save_billing_address_to_customer_address_book:
-          order._save_billing_address_to_customer_address_book
-    })
+  const attributes = {}
+  if (order._save_billing_address_to_customer_address_book) {
+    attributes._save_billing_address_to_customer_address_book = order._save_billing_address_to_customer_address_book
+  }
+  if (order._invoice_requested && order._invoice_vat_number.length > 0) {
+    attributes.metadata = {
+      'invoice_requested': 'yes',
+      'invoice_vat_number': order._invoice_vat_number
+    }
+  }
+  return Object.keys(attributes).length
+    ? updateOrder(order, attributes)
     : order
 }
 
