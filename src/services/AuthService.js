@@ -51,8 +51,12 @@ const refreshAccessToken = refreshToken => {
     })
 }
 
-const updateAccessToken = () => {
+const clearAccessToken = () => {
   store.commit('clearAuthAccessToken')
+}
+
+const updateAccessToken = () => {
+  clearAccessToken()
   let refreshToken = store.state.auth.refresh_token
   if (refreshToken) {
     return refreshAccessToken(refreshToken)

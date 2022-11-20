@@ -48,8 +48,8 @@ apiClient.interceptors.response.use(
       error.response.data.errors &&
       error.response.data.errors[0].code === 'INVALID_TOKEN'
     ) {
-      return AuthService.updateAccessToken().then(accessToken => {
-        error.config.headers['Authorization'] = `Bearer ${accessToken}`
+      return AuthService.clearAccessToken().then(() => {
+        error.config.headers['Authorization'] = ''
         return apiClient.request(error.config)
       })
     }
