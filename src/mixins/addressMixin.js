@@ -34,6 +34,9 @@ export const addressMixin = {
     requiresBillingInfo () {
       return this.billing && this.order.requires_billing_info
     },
+    requiresInvoiceVatNumber () {
+      return this.billing && this.order._invoice_requested && this.order._invoice_vat_number.length === 0
+    },
     showAddressBook () {
       return !_.isEmpty(this.addresses)
     },
@@ -62,6 +65,11 @@ export const addressMixin = {
     billing_info: {
       required: requiredIf(function (model) {
         return this.requiresBillingInfo
+      })
+    },
+    invoice_vat_number: {
+      required: requiredIf(function (model) {
+        return this.requiresInvoiceVatNumber
       })
     }
   },
