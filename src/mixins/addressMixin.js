@@ -86,8 +86,8 @@ export const addressMixin = {
     errorMessages (fieldName) {
       const errors = []
       if (!this.$v[fieldName].$dirty) return errors
-      const field_error = this.$t(`errors.${fieldName}`) != `errors.${fieldName}` ? this.$t(`errors.${fieldName}`) : this.$t('errors.generic')
-      !this.$v[fieldName].required && errors.push(field_error)
+      const fieldError = this.$t(`errors.${fieldName}`) !== `errors.${fieldName}` ? this.$t(`errors.${fieldName}`) : this.$t('errors.generic')
+      !this.$v[fieldName].required && errors.push(fieldError)
       return errors
     },
     handleInput () {

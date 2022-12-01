@@ -123,6 +123,7 @@
           id="invoice-requested"
           v-model="_invoice_requested"
           color="primary"
+          @change="handleInput()"
         ></v-checkbox>
       </v-flex>
       <v-flex xs12 px-2 v-if="_invoice_requested">
